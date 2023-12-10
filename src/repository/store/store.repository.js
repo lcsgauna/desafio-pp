@@ -1,11 +1,11 @@
 const db = require('../../database/openDb');
 
-
-async function getStore(req,res){
-   const teste = await db.run("SELECT * FROM users WHERE type_users = 'J'");
-   console.log(teste);
+exports.getStores = async (request) => {
+   db.all("SELECT * FROM users", (err,rows) => {
+      if(rows){
+         console.log(rows)
+      }else{
+         console.log(err)
+      }
+   });   
 }
-
-module.exports = getStore
-
-

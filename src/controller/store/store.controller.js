@@ -1,8 +1,6 @@
-const {getStore} = require('../../repository/store/store.repository');
+const { getStores } = require('../../repository/store/store.repository');
 
-async function Receive(req,res){
-    await getStore();
+exports.receiveController = async (req,res) => {
+    const teste = await getStores(req);
     res.status(200).json({messsage:'ok'});
 }
-
-module.exports = Receive
