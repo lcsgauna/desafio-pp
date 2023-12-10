@@ -1,0 +1,6 @@
+*.http
+*.sqlite
+*.sh
+*.md
+.env
+.devcontainer
