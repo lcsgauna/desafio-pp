@@ -1,0 +1,32 @@
+{
+    "name": "desafio-picpay",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node",
+    "containerEnv": {
+        "NODE_ENV": "development"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+				"editor.formatOnSave": true
+			},
+            "extensions": [
+                "humao.rest-client",
+                "usernamehw.errorlens",
+                "editorconfig.editorconfig",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    },
+    "postCreateCommand": "yarn add package.json",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version":"latest"
+        }
+    },
+    "hostRequirements": {
+		"cpus": 3,
+		"memory": "2"
+	},
+    "forwardPorts": [3033]
+}
